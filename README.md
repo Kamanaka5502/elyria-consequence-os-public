@@ -1,18 +1,30 @@
-# Elyria Consequence OS — Public Proof Surface
+# Elyria Consequence OS
 
-Elyria Consequence OS is a governed consequence runtime.
+<p align="center">
+  <strong>Public Proof Surface for Governed Consequence Admission</strong>
+</p>
 
-Its core question is not whether a system can generate, recommend, approve, or log an action.
+<p align="center">
+  <img alt="Elyria Consequence OS front page visual style" src="https://raw.githubusercontent.com/Kamanaka5502/elyria-consequence-os-public/main/assets/elyria-consequence-os-hero.webp" />
+</p>
 
-Its core question is:
+<p align="center">
+  <strong>Execution is not assumed. It is admitted.</strong>
+</p>
+
+---
+
+## The Category
+
+Most AI systems focus on generation, approval, orchestration, monitoring, or logging.
+
+Elyria Consequence OS targets a stricter boundary:
 
 > Can an inadmissible action bind consequence?
 
-This public repository presents a bounded, reviewable proof surface for that category.
+If the answer is yes, the system is not governing consequence. It is documenting execution.
 
-## Public category definition
-
-Elyria Consequence OS evaluates whether consequence may bind before a protected effect is allowed to execute.
+Elyria evaluates consequence before protected effect binding.
 
 ```text
 proposal
@@ -25,43 +37,28 @@ proposal
 → deterministic receipt
 ```
 
-Execution is not assumed. It is admitted.
+## Public Proof Surface
 
-## What this repository proves
+This public release demonstrates:
 
-The included public demo shows that:
+| Boundary | Required Condition | Fail-Closed Outcome |
+|---|---|---|
+| Authority | Valid holder and scope | REFUSE |
+| Custody | Verified evidence state | REFUSE |
+| Replay legitimacy | Lineage and legitimacy proven | HALT |
+| Rollback posture | Repair path exists | REFUSE |
+| Receipt | Deterministic evidence hash | Replayable proof |
 
-- valid authority is required
-- custody must be verified
-- replay legitimacy must be present
-- rollback posture must exist
-- inadmissible proposals are refused before effect binding
-- every decision produces a deterministic receipt hash
-
-## What this repository does not disclose
-
-This repository does not include:
-
-- private law bundles
-- customer corridor packs
-- protected proof internals
-- formal BAL/RPA/LPEM corpora
-- hardware enforcement designs
-- production keys, secrets, or credentials
-- confidential deployment adapters
-
-See [`PUBLIC_SCOPE.md`](PUBLIC_SCOPE.md).
-
-## Quick start
+## Quick Start
 
 ```bash
 python -m pip install -e .
-pytest -q
+python -m elyria_public_demo.proof_pack
 python -m elyria_public_demo.cli --demo-valid
 python -m elyria_public_demo.cli --demo-invalid
 ```
 
-## Public demo outcomes
+Expected public outcomes:
 
 ```text
 valid proposal   → EXECUTE
@@ -69,11 +66,11 @@ invalid custody  → REFUSE
 missing replay   → HALT
 ```
 
-## Repository posture
+## Public Boundary
 
-This is a public evaluation and category-proof repository. It is not a claim that a demo alone constitutes a certified distributed production deployment.
+This repository is public-facing. It does not disclose private law bundles, customer corridors, protected proof corpora, production secrets, or confidential deployment materials.
 
-Production deployment requires environment-specific validation, target infrastructure, key management, operational controls, and bounded corridor review.
+See `PUBLIC_SCOPE.md` and `SECURITY.md`.
 
 ## Authors
 
