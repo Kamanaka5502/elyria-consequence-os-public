@@ -5,11 +5,15 @@
 </p>
 
 <p align="center">
-  <img alt="Elyria Consequence OS front page visual style" src="https://raw.githubusercontent.com/Kamanaka5502/elyria-consequence-os-public/main/assets/elyria-consequence-os-hero.webp" />
+  <img alt="Elyria Consequence OS front page visual style" src="https://raw.githubusercontent.com/Kamanaka5502/elyria-consequence-os-public/main/assets/elyria-consequence-os-hero.svg" />
 </p>
 
 <p align="center">
   <strong>Execution is not assumed. It is admitted.</strong>
+</p>
+
+<p align="center">
+  <code>v6.1 review-repaired local distributed consequence-boundary prototype</code>
 </p>
 
 ---
@@ -48,6 +52,29 @@ This public release demonstrates:
 | Replay legitimacy | Lineage and legitimacy proven | HALT |
 | Rollback posture | Repair path exists | REFUSE |
 | Receipt | Deterministic evidence hash | Replayable proof |
+
+## v6.1 Package
+
+The private repaired package is checksum-bound and ready to publish as a release artifact:
+
+```text
+elyria_consequence_os_v6_1_review_repaired.zip
+SHA-256: cd6da12f93f977a765e09bd094fa43c8058bfc961d7225e37c5dc28982d91825
+```
+
+Validated before packaging:
+
+```text
+42 passed
+CLI smoke: init, up, submit, replay, verify-chain
+secret scan: no key/token patterns found
+```
+
+Correct public label:
+
+```text
+Elyria Consequence OS v6.1 — Review-Repaired Local Distributed Consequence-Boundary Prototype
+```
 
 ## Quick Start
 
