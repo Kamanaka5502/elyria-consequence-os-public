@@ -15,7 +15,8 @@ cd6da12f93f977a765e09bd094fa43c8058bfc961d7225e37c5dc28982d91825
 Local validation result:
 
 ```text
-42 passed
+Files: 138
+Tests: 42 passed
 ```
 
 Correct public label:
@@ -45,6 +46,20 @@ Demonstrated proof surface:
 - immutable archive
 - signed artifact posture
 
+Kernel direction:
+
+```text
+proposed movement
+→ authority / standing / custody / replay / admissibility
+→ receipt
+→ effect token
+→ pre-effect witness
+→ guarded effect
+→ post-bind receipt
+```
+
+This is not old-stack audit software. It is a consequence-boundary runtime trunk.
+
 Certification boundary still reserved for target-environment work:
 
 - live multi-host deployment
@@ -53,3 +68,11 @@ Certification boundary still reserved for target-environment work:
 - production API gateway enforcement
 - full BAL/RPA/LPEM machine-checker integration
 - customer corridor readiness
+
+Next strongest upgrade path:
+
+1. independent witness nodes outside the same process/root
+2. hardware-backed signing and attestation path
+3. mandatory formal certificate corridor
+4. external consensus or quorum proof beyond scaffold
+5. customer corridor package with one concrete movement path
